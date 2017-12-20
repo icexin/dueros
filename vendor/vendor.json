@@ -1,0 +1,61 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "gRsLny6IsYuEe2LGbokefIp7lPE=",
+			"path": "github.com/Kitt-AI/snowboy/swig/Go",
+			"revision": "7097116a2cd36fa28bb34c6a7ca3a938633ce1b6",
+			"revisionTime": "2017-11-27T15:04:37Z"
+		},
+		{
+			"checksumSHA1": "26bLDYiJyLClgcUYTmEyRY9BCt8=",
+			"path": "github.com/bobertlo/go-mpg123/mpg123",
+			"revision": "d2238336e6db92fd8538d0bc5e2df85c5f2062fc",
+			"revisionTime": "2014-08-24T08:23:38Z"
+		},
+		{
+			"checksumSHA1": "mPArlhmX2olCpKptxzEXF6NPgfg=",
+			"path": "github.com/brentnd/go-snowboy",
+			"revision": "bae46a0fd9654c06adb9db6c3cad3e5ece76095b",
+			"revisionTime": "2017-11-19T21:19:11Z"
+		},
+		{
+			"checksumSHA1": "LTv/sL33HSC/6TWNuQlTAy1uXtk=",
+			"path": "github.com/gordonklaus/portaudio",
+			"revision": "e66c30a9c4ca11f93538cf8c004831bfb76f3838",
+			"revisionTime": "2017-08-06T14:41:49Z"
+		},
+		{
+			"checksumSHA1": "rJab1YdNhQooDiBWNnt7TLWPyBU=",
+			"path": "github.com/pkg/errors",
+			"revision": "c605e284fe17294bda444b34710735b29d1a9d90",
+			"revisionTime": "2017-05-05T04:36:39Z"
+		},
+		{
+			"checksumSHA1": "zmC8/3V4ls53DJlNTKDZwPSC/dA=",
+			"path": "github.com/satori/go.uuid",
+			"revision": "5bf94b69c6b68ee1b541973bb8e1144db23a194b",
+			"revisionTime": "2017-03-21T23:07:31Z"
+		},
+		{
+			"checksumSHA1": "pi6nM/ZUQaVgd3bNlAcaYG+a5qY=",
+			"path": "github.com/tidwall/gjson",
+			"revision": "080cd2281672e2db949148e6f07cc2e9630fb480",
+			"revisionTime": "2017-12-13T23:29:27Z"
+		},
+		{
+			"checksumSHA1": "Tk+aXpWRuTQhURlO79bd7YogcU0=",
+			"path": "github.com/tidwall/match",
+			"revision": "1731857f09b1f38450e2c12409748407822dc6be",
+			"revisionTime": "2017-10-02T07:59:45Z"
+		},
+		{
+			"checksumSHA1": "76U6GiRZsKjr9OWohbsdfKPok/E=",
+			"path": "github.com/twinj/uuid",
+			"revision": "89173bcdda19db0eb88aef1e1cb1cb2505561d31",
+			"revisionTime": "2015-10-29T04:44:42Z"
+		}
+	],
+	"rootPath": "github.com/icexin/dueros"
+}
