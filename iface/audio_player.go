@@ -31,6 +31,13 @@ func NewAudioPlayer() *AudioPlayer {
 }
 
 func (a *AudioPlayer) Play(m *proto.Message) error {
+	// 关闭前一个播放的音乐，同时等待结束
+	a.state = AudioStateStoped
+	if a.currWriter != nil {
+		a.currWriter.Close()
+		a.currWriter.Wait()
+	}
+
 	payload := &m.PayloadJSON
 	stream := payload.Get("audioItem.stream")
 	url := stream.Get("url").String()
@@ -38,13 +45,6 @@ func (a *AudioPlayer) Play(m *proto.Message) error {
 	w, err := a.p.LoadMP3(url)
 	if err != nil {
 		return err
-	}
-
-	// 关闭前一个播放的音乐，同时等待结束
-	a.state = AudioStateStoped
-	if a.currWriter != nil {
-		a.currWriter.Close()
-		a.currWriter.Wait()
 	}
 
 	a.currWriter = w

@@ -22,6 +22,11 @@ func (v *VoiceOutput) Speak(m *proto.Message) error {
 		return err
 	}
 	defer w.Close()
+	player := DefaultRegistry.GetService("ai.dueros.device_interface.audio_player").(*AudioPlayer)
+	if player != nil {
+		player.Pause(nil)
+		defer player.Resume(nil)
+	}
 	err = w.Play()
 	if err != nil {
 		return err

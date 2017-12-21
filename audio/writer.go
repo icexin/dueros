@@ -165,7 +165,7 @@ func (w *Writer) Pause() {
 }
 
 func (w *Writer) Resume() {
-	if !w.paused {
+	if !w.paused || w.closed {
 		return
 	}
 	w.paused = false
