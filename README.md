@@ -1,5 +1,7 @@
 # Go实现的DuerOS SDK
 
+[![asciicast](https://asciinema.org/a/RQB9mOsQ0oigdu4ZGKOkSuMIF.png)](https://asciinema.org/a/RQB9mOsQ0oigdu4ZGKOkSuMIF)
+
 ## 环境依赖
 
 ### Mac
