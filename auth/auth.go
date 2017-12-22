@@ -26,6 +26,7 @@ var (
 var (
 	clientID     = flag.String("client_id", "", "client id of oauth")
 	clientSecret = flag.String("client_secret", "", "client secret of oauth")
+	accessToken  = flag.String("access_token", "", "access token of oauth, if not empty, client_id and client_secret can leave empty")
 )
 
 type token struct {
@@ -71,6 +72,9 @@ func loadToken(f string) (*token, error) {
 }
 
 func GetToken() (string, error) {
+	if *accessToken != "" {
+		return *accessToken, nil
+	}
 	t, err := loadToken(tokenFile)
 	if err != nil {
 		return "", err
