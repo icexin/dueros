@@ -15,7 +15,7 @@ import (
 )
 
 var (
-	wakeupMethod = flag.String("wake", "keyword", "wakeup method(keyboard|keyword)")
+	wakeupMethod = flag.String("wakeup", "keyword", "wakeup method(keyboard|keyword)")
 )
 
 func setuplog() {
