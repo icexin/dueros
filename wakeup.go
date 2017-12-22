@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	wakeupSensitivity = flag.Float64("sens", 0.4, "wakeup detector sensitivity")
+	wakeupSensitivity = flag.Float64("sens", 0.46, "wakeup detector sensitivity")
 )
 
 const (
