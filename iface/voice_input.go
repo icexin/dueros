@@ -1,6 +1,7 @@
 package iface
 
 import (
+	"fmt"
 	"io"
 
 	"github.com/icexin/dueros/audio"
@@ -22,6 +23,7 @@ func (v *VoiceInput) Listen(m *proto.Message) error {
 		v.stream.Close()
 	}
 	v.slience()
+	fmt.Println(">>> 正在倾听")
 	v.stream = audio.NewRecordStream()
 	ctxid := uuid.NewV4().String()
 	message := proto.NewMessage("ai.dueros.device_interface.voice_input.ListenStarted", map[string]string{

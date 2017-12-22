@@ -47,12 +47,14 @@ func newKeywordWakeupListener() WakeupListener {
 }
 
 func (k *keywordWakeupListener) onWakeup(string) {
+	fmt.Println(">>> wakeup")
 	k.recordReader.Close()
 }
 
 func (k *keywordWakeupListener) ListenAndWakeup() {
 	k.recordReader = audio.NewRecordStream()
 	k.detector.ReadAndDetect(k.recordReader)
+	k.detector.Reset()
 }
 
 func (k *keywordWakeupListener) Close() error {

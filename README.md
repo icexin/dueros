@@ -38,7 +38,7 @@ go build
 
 第一次运行需要指定`client_id`和`client_secret`参数
 
-`dueros --client_id=$id --client__secret=$secret`
+`dueros --client_id=$id --client_secret=$secret`
 
 目录下生成`token.json`之后再运行就不需要了
 
@@ -48,7 +48,7 @@ go build
 
 默认是语音唤醒
 
-当屏幕上出现 `>>> 等待唤醒`的时候就可以使用了，说`活现活现`后，听到`叮`的一声后，说一句`唱首歌儿`
+当屏幕上出现 `>>> 等待唤醒`的时候就可以使用了，说`小度小度`后，听到`叮`的一声后，说一句`唱首歌儿`
 
 
 

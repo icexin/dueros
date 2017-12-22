@@ -73,7 +73,7 @@ func NewWriter(rate, channel int, buffer []byte) (*Writer, error) {
 			return nil, err
 		}
 	}
-	param := portaudio.LowLatencyParameters(nil, device)
+	param := portaudio.HighLatencyParameters(nil, device)
 	param.SampleRate = float64(rate)
 	param.Output.Channels = channel
 	param.FramesPerBuffer = portaudio.FramesPerBufferUnspecified
