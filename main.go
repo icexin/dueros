@@ -62,6 +62,7 @@ func main() {
 	player := audio.NewPlayer()
 	voiceInput := iface.DefaultRegistry.GetService("ai.dueros.device_interface.voice_input").(*iface.VoiceInput)
 	for {
+		fmt.Println(">>> 等待唤醒")
 		wakeup.ListenAndWakeup()
 		player.LoadAndPlay("resource/du.mp3")
 		voiceInput.Listen(nil)

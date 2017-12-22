@@ -1,11 +1,16 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"io"
 
 	snowboy "github.com/brentnd/go-snowboy"
 	"github.com/icexin/dueros/audio"
+)
+
+var (
+	wakeupSensitivity = flag.Float64("sens", 0.4, "wakeup detector sensitivity")
 )
 
 const (
@@ -42,7 +47,7 @@ func newKeywordWakeupListener() WakeupListener {
 	k := &keywordWakeupListener{
 		detector: snowboy.NewDetector("resource/common.res"),
 	}
-	k.detector.HandleFunc(snowboy.NewHotword("resource/wakeup.pmdl", 0.5), k.onWakeup)
+	k.detector.HandleFunc(snowboy.NewHotword("resource/wakeup.pmdl", float32(*wakeupSensitivity)), k.onWakeup)
 	return k
 }
 
