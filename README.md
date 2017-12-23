@@ -30,7 +30,7 @@ cd swig-3.0.12
 ## 编译dueros
 
 ```
-go get github.com/icexin/dueros
+go get -d github.com/icexin/dueros
 cd $GOPATH/src/github.com/icexin/dueros
 go build
 ```
