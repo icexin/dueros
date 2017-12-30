@@ -38,13 +38,32 @@ go build
 
 ## 运行
 
+#### 第一步，设置百度的oauth回调地址
+![回调地址](doc/oauth2.png)
+
+#### 第二步，配置host
+编辑`/etc/hosts`
+
+- 如果运行在树莓派上就配置树莓派的ip，例如树莓派的地址为192.168.1.2，则配置`192.168.1.2 pi.local`
+- 如果运行在本机，则配置`127.0.0.1 pi.local`
+
+#### 第三步，运行的时候指定client_id和client_secret
+
 第一次运行需要指定`client_id`和`client_secret`参数
 
 `dueros --client_id=$id --client_secret=$secret`
 
-目录下生成`token.json`之后再运行就不需要了
+#### 第四步，授权
 
-## 使用
+在浏览器输入`http://pi.local:8080/login`，按照提示进行授权，完成之后会在当前目录下生成token.json
+
+目录下生成`token.json`之后再运行就不需要进行授权了
+
+### 如果没有百度账号，也直接使用别人的access_token，
+
+通过运行的时候指定 `--access_token`，就不需要之前的步骤直接运行，当然得需要别人给你access_token
+
+## 唤醒
 
 `--wakeup` 参数指定唤醒方式，有`keyboard`和`keyword`两种方式，分别对应敲击回车和语音关键字来唤醒机器人 :)
 
